@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eef7f2;
+    color:#2d3a32;
+    overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.9);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+     background:linear-gradient(
+        to right,
+        rgba(20,25,35,.96) 15%,
+        rgba(50,70,100,.45) 55%,
+        rgba(20,25,35,.96) 100%
+    );
+    z-index:1;
+}
+
+/* CONTENIDO */
+
+.contenido{
+    position:absolute;
+    z-index:2;
+    left:70px;
+    top:50%;
+    transform:translateY(-50%);
+    max-width:650px;
+}
+
+.contenido h1{
+    font-size:58px;
+    margin-bottom:20px;
+    color:#f0c978;
+    text-transform:capitalize;
+    text-shadow:0 0 10px rgba(255,255,255,.5);
+}
+
+/* META */
+
+.meta{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+       color:#d8d0c2;
+}
+
+.edad{
+          background:#c89b3c;
+    color:white;
+    padding:4px 10px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+/* DESCRIPCIÓN */
+
+.descripcion{
+    line-height:1.8;
+    color:#ece4d6;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+/* BOTONES */
+
+.botones{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+/* PLAY */
+
+.btn-play{
+      background:linear-gradient(45deg,#c89b3c,#f0c978);
+    color:#fff;
+    box-shadow:0 0 15px rgba(122,184,154,.35);
+}
+
+.btn-play:hover{
+    transform:scale(1.05);
+}
+
+/* BACK */
+
+.btn-back{
+      background:#f5ecd9;
+    color:#2d3545;
+    border:2px solid #b7ddca;
+}
+
+.btn-back:hover{
+    background:#dff3ea;
+}
+
+/* EPISODIOS */
+
+.episodios{
+    padding:60px 70px;
+    background:#283244;
+}
+
+.episodios h2{
+    font-size:40px;
+    margin-bottom:30px;
+     color:#f0c978;
+}
+
+/* GRID */
+
+.grid{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* CARD */
+
+.card{
+    width:280px;
+    background:#34425a;
+    border:1px solid rgba(240,201,120,.2);
+    box-shadow:0 0 15px rgba(0,0,0,.35);
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+   
+   
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(122,184,154,.25);
+}
+
+/* IMAGEN */
+
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+/* INFO */
+
+.info{
+    padding:20px;
+}
+
+.info h3{
+    color:#f0c978;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.info p{
+   
+    color:#ddd3c3;
+    line-height:1.5;
+    font-size:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<section class="hero">
+
+    <img src="imagenes/The-World-Is-Still-Beautiful-Episode-2.png">
+
+    <div class="overlay"></div>
+
+    <div class="contenido">
+
+        <h1>the-world-is-still-beautiful</h1>
+
+        <div class="meta">
+
+            <span class="edad">13+</span>
+            <span>Sub | Dob</span>
+            <span>Acción</span>
+            <span>Comedia</span>
+            <span>Magia</span>
+
+        </div>
+
+        <p class="descripcion">
+
+          La historia está protagonizada por Nike, la decidida princesa del Ducado de Rain, la cual tiene un misterioso poder: puede controlar la lluvia. Tras perder una partida de piedra, papel o tijera con sus hermanas mayores, se ve obligada a casarse en contra de su voluntad con el rey del País del Sol, Livius I. Livius, conquistó el mundo en tres años y se le conoce como “El rey terrible”. Sin embargo, cuando Nike finalmente le conoce en persona, se sorprende al ver que es un chico más joven que ella
+        </p>
+
+        <div class="botones">
+
+            <button class="btn btn-play">
+                ▶ Ver ahora
+            </button>
+
+            <button class="btn btn-back"
+            onclick="window.location.href='mi feliz matrimonio rosa.html'">
+
+                ⬅ Volver
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="episodios">
+
+    <h2>Episodios</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <img src="imagenes/The World is Still Beautiful.jpg">
+
+            <div class="info">
+
+                <h3>E1 - La princesa de la lluvia</h3>
+
+                <p>
+                    Nike es enviada al Reino del Sol para casarse con el joven rey Livius.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/the world.png">
+
+            <div class="info">
+ <h3>E2 - El rey del Sol</h3>
+
+                <p>
+                    Nike conoce a Livius y descubre que no es el tirano que esperaba.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/the-world-is-still-beautiful-v0-db7z6jipze0g1.webp">
+
+            <div class="info">
+
+         
+                <h3>E3 - Un mundo entre la lluvia y el sol</h3>
+
+                <p>
+                    Ambos comienzan a construir una relación entre dos reinos muy diferentes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+</body>
+</html>
