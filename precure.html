@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+   *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#fff7fb;
+    color:#3a2f3a;
+    overflow-x:hidden;
+}
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+  background:linear-gradient(
+        to right,
+        rgba(255,247,251,.95) 15%,
+        rgba(255,182,214,.35) 55%,
+        rgba(255,247,251,.95) 100%
+    );
+    z-index:1;
+}
+
+.contenido{
+    position:absolute;
+    z-index:2;
+    left:70px;
+    top:50%;
+    transform:translateY(-50%);
+    max-width:650px;
+}
+
+.contenido h1{
+    font-size:60px;
+    margin-bottom:20px;
+     color:#ff4fa3;
+}
+
+.meta{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+       color:#7a5b7a;
+}
+
+.edad{
+    background:#ff4fa3;
+    color:white;
+    padding:4px 10px;
+    border-radius:5px;
+}
+
+.descripcion{
+    line-height:1.7;
+   color:#5a445a;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+.botones{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-play{
+     background:linear-gradient(45deg,#ff4fa3,#ff8bd2);
+    color:white;
+    box-shadow:0 0 15px rgba(255,79,163,.25);
+}
+
+.btn-play:hover{
+    transform:scale(1.05);
+}
+
+.btn-back{
+        background:#fff;
+    color:#ff4fa3;
+    border:2px solid #ffd1e6;
+}
+.episodios{
+    padding:60px 70px;
+    background:#ffe6f3;
+}
+
+.episodios h2{
+    font-size:40px;
+    margin-bottom:30px;
+ color:#ff4fa3;
+}
+
+/* GRID */
+
+.grid{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* CARD */
+
+.card{
+    width:280px;
+ background:white;
+    border:2px solid #ffd1e6;
+    box-shadow:0 5px 18px rgba(255,79,163,.12);
+    overflow:hidden;
+    transition:.3s;
+   
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* IMAGEN */
+
+.card img{
+    width:100%;
+    height:160px; /* imagen más pequeña */
+    object-fit:cover;
+}
+
+/* INFO */
+
+.info{
+    padding:20px;
+}
+
+.info h3{
+   color:#ff4fa3;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.info p{
+        color:#6a4a6a;
+    line-height:1.5;
+    font-size:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+
+<section class="hero">
+
+    <img src="imagenes/pretycureportad.webp">
+
+    <div class="overlay"></div>
+
+    <div class="contenido">
+
+      
+    <h1>Pretty Cure</h1>
+
+        <div class="meta">
+
+            <span class="edad">13+</span>
+            <span>Sub | Dob</span>
+            <span>Acción</span>
+            <span>Comedia</span>
+            <span>Magia</span>
+
+        </div>
+
+       
+    <p class="descripcion">
+
+        Pretty Cure sigue la historia de un grupo de chicas que son elegidas para convertirse en guerreras mágicas.  
+        Con la ayuda de seres mágicos, obtienen poderes especiales para proteger el mundo de las fuerzas oscuras.  
+        A lo largo de sus batallas, fortalecen su amistad, su valentía y su espíritu de equipo.
+
+    </p>
+
+        <div class="botones">
+
+            <button class="btn btn-play">
+                ▶ Ver ahora
+            </button>
+
+            <button class="btn btn-back"
+            onclick="window.location.href='mi feliz matrimonio rosa.html'">
+
+                ⬅ Volver
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="episodios">
+
+    <h2>Episodios</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <img src="imagenes/Pretty Cure.jpg">
+
+            <div class="info">
+
+              
+                <h3>E1 - El despertar de las Precure</h3>
+
+                <p>
+                    Las chicas descubren sus poderes mágicos.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/prety2.jfif">
+
+            <div class="info">
+
+             <h3>E2 - La primera batalla</h3>
+
+                <p>
+                    Enfrentan a su primer enemigo oscuro.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/prety3.webp">
+
+            <div class="info">
+
+                <h3>E3 - La fuerza de la amistad</h3>
+
+                <p>
+                    El equipo aprende a luchar unido.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

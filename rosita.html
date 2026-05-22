@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+       background:#f7f3ef;
+    color:#3b3b3b;
+    overflow-x:hidden;
+}
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero img{
+            width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(247,243,239,.95) 15%,
+        rgba(173,205,230,.35) 55%,
+        rgba(247,243,239,.95) 100%
+    );
+    z-index:1;
+}
+
+.contenido{
+    position:absolute;
+    z-index:2;
+    left:70px;
+    top:50%;
+    transform:translateY(-50%);
+    max-width:650px;
+}
+
+.contenido h1{
+    font-size:60px;
+    margin-bottom:20px;
+    color:#5b7fa6;
+}
+
+.meta{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+   color:#6b6b6b;
+}
+
+.edad{
+   background:#f2a7b5;
+    padding:4px 10px;
+    border-radius:5px;
+}
+
+.descripcion{
+    line-height:1.7;
+        color:#4a4a4a;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+.botones{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-play{
+     background:#5b7fa6;
+    color:white;
+}
+
+.btn-play:hover{
+    transform:scale(1.05);
+}
+
+.btn-back{
+    background:white;
+    color:black;
+}
+.episodios{
+    padding:60px 70px;
+    background:#f7f3ef;
+}
+
+.episodios h2{
+    font-size:40px;
+    margin-bottom:30px;
+    color:#5b7fa6;
+}
+
+/* GRID */
+
+.grid{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* CARD */
+
+.card{
+    width:280px;
+    background:#ffffff;
+    border:1px solid #d7e2ec;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(0,0,0,.5);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* IMAGEN */
+
+.card img{
+    width:100%;
+    height:160px; /* imagen más pequeña */
+    object-fit:cover;
+}
+
+/* INFO */
+
+.info{
+    padding:20px;
+}
+
+.info h3{
+    color:#ff8bd2;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.info p{
+    color:#555;
+    line-height:1.5;
+    font-size:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<section class="hero">
+
+    <img src="imagenes/orimiya.webp">
+
+    <div class="overlay"></div>
+
+    <div class="contenido">
+
+        <h1>Horimiya</h1>
+
+        <div class="meta">
+
+            <span class="edad">13+</span>
+            <span>Sub | Dob</span>
+            <span>Acción</span>
+            <span>Comedia</span>
+            <span>Magia</span>
+
+        </div>
+<p class="descripcion">
+
+    Horimiya cuenta la historia de Kyouko Hori, una estudiante popular y responsable, y Izumi Miyamura, un chico reservado que en realidad tiene una personalidad muy diferente fuera de la escuela.  
+    Cuando descubren los secretos del otro, comienzan a acercarse y desarrollan una relación llena de amistad, confianza y amor.
+
+</p>
+
+
+        <div class="botones">
+
+            <button class="btn btn-play">
+                ▶ Ver ahora
+            </button>
+
+            <button class="btn btn-back"
+            onclick="window.location.href='mi feliz matrimonio rosa.html'">
+
+                ⬅ Volver
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="episodios">
+
+    <h2>Episodios</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <img src="imagenes/orimiya1.webp">
+
+            <div class="info">
+
+                 <h3>E1 - Dos caras diferentes</h3>
+
+                <p>
+                    Hori y Miyamura descubren un lado oculto del otro.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/orimiy2.jpg">
+
+            <div class="info">
+
+                <h3>E2 - Un secreto compartido</h3>
+
+                <p>
+                    Ambos comienzan a conocerse fuera de la escuela.
+                </p>
+
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/orimiya3.jfif">
+
+            <div class="info">
+    <h3>E3 - El inicio de una relación</h3>
+
+                <p>
+                    Su amistad empieza a transformarse en algo más profundo.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

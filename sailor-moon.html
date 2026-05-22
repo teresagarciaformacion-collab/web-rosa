@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+     background:#0b0f2a;
+    color:#f5f5ff;
+    overflow-x:hidden;
+}
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(11,15,42,.96) 15%,
+        rgba(255,182,217,.25) 55%,
+        rgba(11,15,42,.96) 100%
+    );
+    z-index:1;
+}
+
+.contenido{
+    position:absolute;
+    z-index:2;
+    left:70px;
+    top:50%;
+    transform:translateY(-50%);
+    max-width:650px;
+}
+
+.contenido h1{
+    font-size:60px;
+    margin-bottom:20px;
+   color:#ff5fa2; 
+}
+
+.meta{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+     color:#d6d8ff;
+}
+
+.edad{
+     background:#ff5fa2;
+    color:white;
+    padding:4px 10px;
+    border-radius:5px;
+}
+
+.descripcion{
+    line-height:1.7;
+ color:#e8e9ff;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+.botones{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-play{
+    background:linear-gradient(45deg,#ff5fa2,#ffd1e8);
+    color:#0b0f2a;
+}
+
+.btn-play:hover{
+    transform:scale(1.05);
+}
+
+.btn-back{
+    background:white;
+    color:black;
+}
+.episodios{
+    padding:60px 70px;
+   
+    background:#121a3d;
+}
+
+.episodios h2{
+    font-size:40px;
+    margin-bottom:30px;
+    color:#ff8bd2;
+}
+
+/* GRID */
+
+.grid{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* CARD */
+
+.card{
+    width:280px;
+       background:#1a2247;
+    border:1px solid rgba(255,209,232,.2);
+    box-shadow:0 0 15px rgba(0,0,0,.4);
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(0,0,0,.5);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+     box-shadow:0 0 20px rgba(255,95,162,.25);
+}
+
+/* IMAGEN */
+
+.card img{
+    width:100%;
+    height:160px; /* imagen más pequeña */
+    object-fit:cover;
+}
+
+/* INFO */
+
+.info{
+    padding:20px;
+}
+
+.info h3{
+color:#ffd1e8;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.info p{
+   color:#d6d8ff;
+
+    line-height:1.5;
+    font-size:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+
+<section class="hero">
+
+    <img src="imagenes/moon.webp">
+
+    <div class="overlay"></div>
+
+    <div class="contenido">
+
+        <h1>Sailor Moon</h1>
+
+        <div class="meta">
+
+            <span class="edad">13+</span>
+            <span>Sub | Dob</span>
+            <span>Acción</span>
+            <span>Comedia</span>
+            <span>Magia</span>
+
+        </div>
+
+        <p class="descripcion">
+
+          La historia está protagonizada por Sailor Moon, una joven estudiante que vive en un mundo moderno. Tiene el poder de controlar la luna y se ve obligada a luchar contra las fuerzas del mal que amenazan su tierra. A lo largo de su viaje, descubre secretos sobre su origen y su verdadero destino.
+        </p>
+
+        <div class="botones">
+
+            <button class="btn btn-play">
+                ▶ Ver ahora
+            </button>
+
+            <button class="btn btn-back"
+            onclick="window.location.href='mi feliz matrimonio rosa.html'">
+
+                ⬅ Volver
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="episodios">
+
+    <h2>Episodios</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <img src="imagenes/sailor portda.webp">
+
+            <div class="info">
+
+                 <h3>E1 - Una guerrera misteriosa aparece</h3>
+
+    <p>
+        Usagi Tsukino conoce a Luna y descubre
+        que está destinada a convertirse en Sailor Moon.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/Sailor Moon.webp">
+
+            <div class="info">
+  <h3>E2 - La búsqueda del Cristal de Plata</h3>
+
+        <p>
+            Sailor Moon comienza a luchar contra
+            las fuerzas del Reino Oscuro.
+        </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/sailor.avif">
+
+            <div class="info">
+
+                <h3>E3 - El despertar de las Sailor Scouts</h3>
+
+                <p>
+                    Nuevas guerreras se unen para proteger
+            la Tierra de una poderosa amenaza.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

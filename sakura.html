@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#fff0f6;
+    color:#4a2c40;
+    overflow-x:hidden;
+}
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+        background:linear-gradient(
+        to right,
+        rgba(255,240,246,.95) 15%,
+        rgba(255,192,220,.45) 55%,
+        rgba(255,240,246,.95) 100%
+    );
+    z-index:1;
+}
+
+.contenido{
+    position:absolute;
+    z-index:2;
+    left:70px;
+    top:50%;
+    transform:translateY(-50%);
+    max-width:650px;
+}
+
+.contenido h1{
+    font-size:60px;
+    margin-bottom:20px;
+    color:#ff8bd2;
+}
+
+.meta{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+    color:#ddd;
+}
+
+.edad{
+    background:#ff69b4;
+    padding:4px 10px;
+    border-radius:5px;
+}
+
+.descripcion{
+       line-height:1.7;
+    color:#5e4050;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+.botones{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-play{
+      background:linear-gradient(45deg,#ff4fa3,#ff9ad5);
+    color:white;
+}
+
+.btn-play:hover{
+    transform:scale(1.05);
+}
+
+.btn-back{
+    background:white;
+    color:black;
+}
+.episodios{
+    padding:60px 70px;
+        background:#ffeaf4;
+}
+
+.episodios h2{
+    font-size:40px;
+    margin-bottom:30px;
+       color:#ff4fa3;
+}
+
+/* GRID */
+
+.grid{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* CARD */
+.card{
+    width:280px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 5px 20px rgba(255,105,180,.2);
+    border:2px solid #ffd3e8;
+}
+
+.card:hover{
+    transform:translateY(-8px) scale(1.02);
+}
+
+/* IMAGEN */
+
+.card img{
+    width:100%;
+    height:160px; /* imagen más pequeña */
+    object-fit:cover;
+}
+
+/* INFO */
+
+.info{
+    padding:20px;
+}
+
+.info h3{color:#ff4fa3;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.info p{
+     color:#6a4b5c;
+    line-height:1.5;
+    font-size:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+
+<section class="hero">
+
+    <img src="imagenes/sakura card.png">
+
+    <div class="overlay"></div>
+
+    <div class="contenido">
+
+    <h1>Sakura Card Captor</h1>
+
+<div class="meta">
+
+    <span class="edad">10+</span>
+    <span>Sub | Dob</span>
+    <span>Magia</span>
+    <span>Aventura</span>
+    <span>Romance</span>
+
+</div>
+
+      <p class="descripcion">
+
+    Sakura Kinomoto es una niña alegre que descubre un misterioso libro mágico en el sótano de su casa. Sin querer, libera las Cartas Clow, unas cartas con poderes mágicos que se dispersan por toda la ciudad. Con la ayuda de Kerberos, el guardián de las cartas, Sakura deberá capturarlas antes de que causen problemas, mientras descubre nuevos sentimientos y amistades.
+
+</p>
+        <div class="botones">
+
+            <button class="btn btn-play">
+                ▶ Ver ahora
+            </button>
+
+            <button class="btn btn-back"
+            onclick="window.location.href='mi feliz matrimonio rosa.html'">
+
+                ⬅ Volver
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="episodios">
+
+    <h2>Episodios</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <img src="imagenes/sakura libro magico.jpeg">
+
+            <div class="info">
+
+                  <h3>E1 - Sakura y el misterioso libro mágico</h3>
+
+                <p>
+                    Sakura libera accidentalmente las Cartas Clow
+                    y recibe la misión de recuperarlas.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/sakura2.jpg">
+
+            <div class="info">
+
+                          <h3>E2 - La carta del viento</h3>
+
+                <p>
+                    Sakura intenta capturar una poderosa carta
+                    que provoca fuertes ráfagas en la ciudad.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/sakura3.webp">
+
+            <div class="info">
+
+                        <h3>E3 - El primer desafío de Sakura</h3>
+
+                <p>
+                    Una nueva carta mágica aparece y Sakura
+                    deberá aprender a usar mejor sus poderes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
