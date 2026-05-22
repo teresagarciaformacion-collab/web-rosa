@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+     background:#f3efe9;
+    color:#3b2f2f;
+    overflow-x:hidden;
+}
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+     background:linear-gradient(
+        to right,
+        rgba(243,239,233,.95) 15%,
+        rgba(255,180,120,.25) 55%,
+        rgba(243,239,233,.95) 100%
+    );
+    z-index:1;
+}
+
+.contenido{
+    position:absolute;
+    z-index:2;
+    left:70px;
+    top:50%;
+    transform:translateY(-50%);
+    max-width:650px;
+}
+
+.contenido h1{
+    font-size:60px;
+    margin-bottom:20px;
+   color:#d96b4c; 
+}
+
+.meta{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+  color:#6b5a54;
+}
+
+.edad{
+     background:#d96b4c;
+    color:white;
+    padding:4px 10px;
+    border-radius:5px;
+}
+
+.descripcion{
+    line-height:1.7;
+     color:#4a3a36;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+.botones{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-play{
+   background:#d96b4c;
+    color:white;
+}
+
+.btn-play:hover{
+    transform:scale(1.05);
+     background:#e98a6a;
+}
+
+.btn-back{
+    background:#fff;
+    color:#d96b4c;
+    border:2px solid #f0c2a8;
+}
+.episodios{
+    padding:60px 70px;
+       background:#efe3da;
+}
+
+.episodios h2{
+    font-size:40px;
+    margin-bottom:30px;
+      color:#d96b4c;
+}
+
+/* GRID */
+
+.grid{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* CARD */
+
+.card{
+    width:280px;
+       background:#ffffff;
+    border:1px solid #f0c2a8;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    overflow:hidden;
+    transition:.3s;
+   
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* IMAGEN */
+
+.card img{
+    width:100%;
+    height:160px; /* imagen más pequeña */
+    object-fit:cover;
+}
+
+/* INFO */
+
+.info{
+    padding:20px;
+}
+
+.info h3{  color:#d96b4c;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.info p{
+      color:#5a4a45;
+    line-height:1.5;
+    font-size:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+
+<section class="hero">
+
+    <img src="imagenes/clanan.jpg">
+
+    <div class="overlay"></div>
+
+    <div class="contenido">
+
+    
+    <h1>Clannad</h1>
+
+        <div class="meta">
+
+            <span class="edad">13+</span>
+            <span>Sub | Dob</span>
+            <span>Acción</span>
+            <span>Comedia</span>
+            <span>Magia</span>
+
+        </div>
+
+       <p class="descripcion">
+
+        Clannad sigue la historia de Tomoya Okazaki, un estudiante problemático que siente que su vida no tiene rumbo.  
+        Todo cambia cuando conoce a Nagisa Furukawa, una chica amable y débil que sueña con revivir el club de teatro de su escuela.  
+        A través de su relación, ambos comienzan a sanar sus heridas emocionales y a encontrar un nuevo propósito en la vida.
+
+    </p>
+
+        <div class="botones">
+
+            <button class="btn btn-play">
+                ▶ Ver ahora
+            </button>
+
+            <button class="btn btn-back"
+            onclick="window.location.href='mi feliz matrimonio rosa.html'">
+
+                ⬅ Volver
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="episodios">
+
+    <h2>Episodios</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <img src="imagenes/clanaand1.jpg">
+
+            <div class="info">
+
+                 <h3>E1 - Encuentro en la escuela</h3>
+
+                <p>
+                    Tomoya conoce a Nagisa y comienza una nueva etapa en su vida.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/clanad2.jpg">
+
+            <div class="info">
+ <h3>E2 - El club de teatro</h3>
+
+                <p>
+                    Nagisa intenta revivir el club con la ayuda de Tomoya.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/clanand3.webp">
+
+            <div class="info">
+ <h3>E3 - Nuevos comienzos</h3>
+
+                <p>
+                    Ambos comienzan a construir una fuerte amistad.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

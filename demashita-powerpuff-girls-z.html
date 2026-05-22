@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+        background:#0b0f1a;
+    color:#f5f7ff;
+    overflow-x:hidden;
+
+}
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    
+}
+
+.hero img{
+     width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.9);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+     background:linear-gradient(
+        to right,
+        rgba(10,12,20,.96) 15%,
+        rgba(0,0,0,.55) 55%,
+        rgba(10,12,20,.96) 100%
+    );
+
+    z-index:1;
+}
+
+.contenido{
+    position:absolute;
+    z-index:2;
+
+    left:70px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    max-width:650px;
+}
+
+.contenido h1{
+    font-size:70px;
+    margin-bottom:20px;
+    color:#ff4fa3; 
+}
+
+.meta{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+       color:#cfd6ff;
+    flex-wrap:wrap;
+}
+
+.edad{
+    background:#ff4fa3;
+    color:white;
+    padding:4px 10px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.descripcion{
+    line-height:1.7;
+    color:#ddd;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+/* BOTONES */
+
+.botones{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-play{
+    background:#ff4fa3;
+    color:white;
+}
+
+.btn-play:hover{
+    background:#ff79bb;
+    transform:scale(1.05);
+}
+
+.btn-back{
+      background:rgba(255, 91, 214, 0.856);
+    color:white;
+}
+.episodios{
+    padding:60px 70px;
+    background:#111;
+}
+
+.episodios h2{
+    font-size:40px;
+    margin-bottom:30px;
+        color:#ff4fa3;
+}
+
+/* GRID */
+
+.grid{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* CARD */
+
+.card{
+    width:280px;
+   background:#151a2b;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(0,0,0,.5);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* IMAGEN */
+
+.card img{
+    width:100%;
+    height:160px; /* imagen más pequeña */
+    object-fit:cover;
+}
+
+/* INFO */
+
+.info{
+    padding:20px;
+}
+
+.info h3{
+     color:#ff4fa3;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.info p{
+        color:#cfd6ff;
+    line-height:1.5;
+    font-size:15px;
+}
+</style>
+
+<body>
+
+<section class="hero">
+
+    <img src="imagenes/girlz.jpeg ">
+
+    <div class="overlay"></div>
+
+    <div class="contenido">
+
+        <h1>Demashita! Powerpuff Girls Z</h1>
+
+        <div class="meta">
+
+            <span class="edad">13+</span>
+            <span>Sub | Dob</span>
+            <span>Acción</span>
+            <span>Comedia</span>
+            <span>Magia</span>
+
+        </div>
+
+        <p class="descripcion">
+
+            Momoko, Miyako y Kaoru reciben poderes especiales
+            después de un misterioso accidente y se convierten
+            en las heroínas Powerpuff Girls Z para proteger
+            la ciudad de monstruos y villanos caóticos.
+
+        </p>
+
+        <div class="botones">
+
+            <button class="btn btn-play">
+                ▶ Ver ahora
+            </button>
+
+            <button class="btn btn-back"
+            onclick="window.location.href='mi feliz matrimonio rosa.html'">
+
+                ⬅ Volver
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="episodios">
+
+    <h2>Episodios</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <img src="imagenes/damashita.webp ">
+
+            <div class="info">
+
+                <h3>E1 - Las nuevas heroínas</h3>
+
+                <p>
+                    Las chicas obtienen sus poderes mágicos
+                    y descubren una nueva amenaza.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/Demashita! Powerpuff Girls Z.jpg">
+
+            <div class="info">
+
+                <h3>E2 - Mojo Jojo aparece</h3>
+
+                <p>
+                    Un extraño villano comienza a causar
+                    problemas en la ciudad.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/Demashita!.jpg">
+
+            <div class="info">
+
+                <h3>E3 - Batalla explosiva</h3>
+
+                <p>
+                    Las Powerpuff Girls Z enfrentan
+                    un enemigo mucho más poderoso.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

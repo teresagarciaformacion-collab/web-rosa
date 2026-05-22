@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+     background:#fff6fb;
+    color:white;
+    overflow-x:hidden;
+}
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero img{
+            width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;}
+
+.overlay{
+    position:absolute;
+    inset:0;
+   background:linear-gradient(
+        to right,
+        rgba(255,246,251,.95) 15%,
+        rgba(255,183,200,.35) 55%,
+        rgba(255,246,251,.95) 100%
+    );
+    z-index:1;
+}
+
+.contenido{
+    position:absolute;
+    z-index:2;
+    left:70px;
+    top:50%;
+    transform:translateY(-50%);
+    max-width:650px;
+}
+
+.contenido h1{
+    font-size:60px;
+    margin-bottom:20px;
+   color:#ff4f81;
+}
+
+.meta{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+     color:#7a5a66;
+}
+
+.edad{
+    background:#ff4f81;
+    padding:4px 10px;
+    border-radius:5px;
+}
+
+.descripcion{
+    line-height:1.7;
+       color:#6b4a55;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+.botones{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-play{
+   background:#ff4f81;
+    color:white;
+}
+
+.btn-play:hover{
+
+    background:#ff7aa3;
+    transform:scale(1.05);
+}
+
+.btn-back{
+ background:#fff0f5;
+    color:#ff4f81;
+    border:2px solid #ffd1dc;
+}
+.episodios{
+    padding:60px 70px;
+      background:#ffe6ef;
+}
+
+.episodios h2{
+    font-size:40px;
+    margin-bottom:30px;
+     color:#ff4f81;
+}
+
+/* GRID */
+
+.grid{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* CARD */
+
+.card{
+    width:280px;
+     background:#ffffff;
+   border:2px solid #ffd1dc;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 5px 18px rgba(255,79,129,.12);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* IMAGEN */
+
+.card img{
+    width:100%;
+    height:160px; /* imagen más pequeña */
+    object-fit:cover;
+}
+
+/* INFO */
+
+.info{
+    padding:20px;
+}
+
+.info h3{
+     color:#ff4f81;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.info p{
+    color:#6a4a55;
+    line-height:1.5;
+    font-size:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<section class="hero">
+
+    <img src="imagenes/2daportada de mi melody.png">
+
+    <div class="overlay"></div>
+
+    <div class="contenido">
+
+        <h1>Onegai my melody</h1>
+
+        <div class="meta">
+
+            <span class="edad">13+</span>
+            <span>Sub | Dob</span>
+            <span>Acción</span>
+            <span>Comedia</span>
+            <span>Magia</span>
+
+        </div>
+<p class="descripcion">
+
+    My Melody es una conejita del Reino de Mariland que llega al mundo humano para ayudar a las personas con problemas de corazón.  
+    Sin embargo, su rival Kuromi y otras fuerzas mágicas pueden complicar sus misiones, haciendo que cada día sea una nueva aventura llena de magia y amistad.
+
+</p>
+
+        <div class="botones">
+
+            <button class="btn btn-play">
+                ▶ Ver ahora
+            </button>
+
+            <button class="btn btn-back"
+            onclick="window.location.href='mi feliz matrimonio rosa.html'">
+
+                ⬅ Volver
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="episodios">
+
+    <h2>Episodios</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <img src="imagenes/melodi flores.jfif">
+
+            <div class="info">
+
+                        <h3>E1 - La llegada de My Melody</h3>
+
+                <p>
+                    My Melody llega al mundo humano para ayudar a los demás.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/onegai-my-melody-kirara-s01.jpg">
+
+            <div class="info">
+
+                   <h3>E2 - Kuromi aparece</h3>
+
+                <p>
+                    Su rival comienza a causar problemas con magia oscura.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="imagenes/one 2.jfif">
+
+            <div class="info">
+
+                  <h3>E3 - Un corazón en peligro</h3>
+
+                <p>
+                    My Melody ayuda a una persona a resolver su problema emocional.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
